@@ -1,26 +1,26 @@
 [
-    {
-      "id": 1,
-      "title": "Enjoy on your TV.",
-      "subTitle": "Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.",
-      "image": "/images/misc/home-tv.jpg",
-      "alt": "Tiger King on Netflix",
-      "direction": "row"
-    },
-    {
-      "id": 2,
-      "title": "Download your programmes to watch on the go.",
-      "subTitle": "Save your data and watch all your favourites offline.",
-      "image": "/images/misc/home-mobile.jpg",
-      "alt": "Tiger King on Netflix",
-      "direction": "row-reverse"
-    },
-    {
-      "id": 3,
-      "title": "Watch everywhere.",
-      "subTitle": "Stream unlimited films and TV programmes on your phone, tablet, laptop and TV without paying more.",
-      "image": "/images/misc/home-imac.jpg",
-      "alt": "Money Heist on Netflix",
-      "direction": "row"
-    }
-  ]
+  {
+    "id": 1,
+    "title": "Enjoy on your TV.",
+    "subTitle": "Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.",
+    "image": "https://cdn.vox-cdn.com/thumbor/BLo28lcEphikOsG6xVmnC3ppEMY=/0x0:2840x2174/920x613/filters:focal(994x538:1448x992):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/66533117/tigerking.0.jpg",
+    "alt": "Tiger King on Netflix",
+    "direction": "row"
+  },
+  {
+    "id": 2,
+    "title": "Download your programmes to watch on the go.",
+    "subTitle": "Save your data and watch all your favourites offline.",
+    "image": "https://static.highsnobiety.com/thumbor/eC5gmig7-sk7FTpism8zLqze1GI=/fit-in/1200x720/smart/static.highsnobiety.com/wp-content/uploads/2019/06/27095415/spider-man-into-the-spider-verse-netflix-00.jpg",
+    "alt": "Tiger King on Netflix",
+    "direction": "row-reverse"
+  },
+  {
+    "id": 3,
+    "title": "Watch everywhere.",
+    "subTitle": "Stream unlimited films and TV programmes on your phone, tablet, laptop and TV without paying more.",
+    "image": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2020%2F08%2Fnetflix-money-heist-season-five-finale-confirmed-001.jpg?q=90&w=1400&cbr=1&fit=max",
+    "alt": "Money Heist on Netflix",
+    "direction": "row"
+  }
+]

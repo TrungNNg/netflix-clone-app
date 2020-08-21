@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Card, Loading, Header } from '../components';
+import Fuse from 'fuse.js';
+import { Card, Loading, Header, Player } from '../components';
 import * as ROUTES from '../constants/routes';
 import { FirebaseContext } from '../context/firebase';
 import { SelectProfileContainer } from './profiles';
@@ -29,6 +30,17 @@ export function BrowseContainer({ slides }) {
         setSlideRows(slides[category]);
     }, [slides, category]);
     
+    useEffect(() => {
+      const fuse = new Fuse(slideRows, { keys: ['data.description', 'data.title', 'data.genre'] });
+      const results = fuse.search(searchTerm).map(({ item }) => item);
+      
+      if (slideRows.length > 0 && searchTerm.length > 3 && results.length > 0) {
+          setSlideRows(results);
+      } else {
+          setSlideRows(slides[category]);
+      }
+    }, [searchTerm])
+    
     return profile.displayName ? (
         <>
         {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
@@ -36,7 +48,7 @@ export function BrowseContainer({ slides }) {
             <Header src="joker1" dontShowOnSmallViewPort>
                 <Header.Frame>
                     <Header.Group>
-                        <Header.Logo to={ROUTES.HOME} src="/images/misc/logo.svg" alt="Netflix" />
+                        <Header.Logo to={ROUTES.HOME} src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" />
                         <Header.Link 
                             active={category === 'series' ? 'true' : 'false'}
                             onClick={() => setCategory('series')}>
@@ -93,7 +105,10 @@ export function BrowseContainer({ slides }) {
                             ))}
                         </Card.Entities>
                         <Card.Feature category={category}>
-                            <p>I am the feature!</p>
+                            <Player>
+                                <Player.Button />
+                                <Player.Video />
+                            </Player>
                         </Card.Feature>
                     </Card>
                 ))}
