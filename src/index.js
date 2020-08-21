@@ -16,6 +16,7 @@ const config = {
 
 const firebase = window.firebase.initializeApp(config);
 
+
 ReactDOM.render(
     <>
         <FirebaseContext.Provider value={{ firebase: window.firebase }}>
