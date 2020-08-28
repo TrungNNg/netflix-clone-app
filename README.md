@@ -1,4 +1,4 @@
-The project is a Netflix clone build with React and Firebase.
+##The project is a Netflix clone build with React and Firebase.##
 
 This is a advance project that I complete with major help from my instructor Karl Hadwen - @karlhadwen - https://www.youtube.com/channel/UC1DUQiZduv_yNZy0O7n_iHA .
 
