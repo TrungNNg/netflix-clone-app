@@ -31,22 +31,6 @@ Header.Group = function HeaderGroup({ children, ...restProps }) {
     return <Group {...restProps}>{children}</Group>;
 }
 
-Header.Logo = function HeaderLogo({ to, ...restProps }) {
-    return (
-        <ReachRouterLink to={to}>
-            <Logo {...restProps} />
-        </ReachRouterLink>
-    )
-}
-
-Header.Text = function HeaderText({ children, ...restProps }) {
-    return <Text {...restProps}>{children}</Text>;
-}
-
-Header.Link = function HeaderLink({ children, ...restProps }) {
-    return <Link {...restProps}>{children}</Link>;
-}
-
 Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...restProps }) {
     const [searchActive, setSearchActive] = useState(false);
     
@@ -63,6 +47,22 @@ Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...restProps 
             />
         </Search>
     )
+}
+
+Header.Logo = function HeaderLogo({ to, ...restProps }) {
+    return (
+        <ReachRouterLink to={to}>
+            <Logo {...restProps} />
+        </ReachRouterLink>
+    )
+}
+
+Header.Text = function HeaderText({ children, ...restProps }) {
+    return <Text {...restProps}>{children}</Text>;
+}
+
+Header.Link = function HeaderLink({ children, ...restProps }) {
+    return <Link {...restProps}>{children}</Link>;
 }
 
 Header.ButtonLink = function HeaderButtonLink({ children, ...restProps }) {

@@ -16,7 +16,7 @@ export function BrowseContainer({ slides }) {
     const { firebase } = useContext(FirebaseContext);
     
     const user = {
-        displayName: "Karl",
+        displayName: "User",
         photoURL: "1"
     };
     
@@ -48,16 +48,16 @@ export function BrowseContainer({ slides }) {
             <Header src="joker1" dontShowOnSmallViewPort>
                 <Header.Frame>
                     <Header.Group>
-                        <Header.Logo to={ROUTES.HOME} src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" />
-                        <Header.Link 
-                            active={category === 'series' ? 'true' : 'false'}
-                            onClick={() => setCategory('series')}>
-                            Series
-                        </Header.Link>
+                        <Header.Logo to={ROUTES.HOME} src="/images/misc/logo.svg" alt="Netflix" />
                         <Header.Link 
                             active={category === 'films' ? 'true' : 'false'}
                             onClick={() => setCategory('films')}>
                             Films
+                        </Header.Link>
+                        <Header.Link 
+                            active={category === 'series' ? 'true' : 'false'}
+                            onClick={() => setCategory('series')}>
+                            Series
                         </Header.Link>
                     </Header.Group>
                     <Header.Group>
